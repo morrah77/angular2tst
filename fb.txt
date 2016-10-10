@@ -1,0 +1,15 @@
+https://www.facebook.com/dialog/oauth?
+  client_id={app-id}
+  &redirect_uri={redirect-uri}
+  &response_type={code|token|code%20token|granted_scopes|scope}
+
+  https://www.facebook.com/dialog/oauth?client_id=1529881367326206&redirect_uri=http://localhost:3000/&response_type=token&scope=public_profile,email,user_posts
+
+  ID ПРИЛОЖЕНИЯ: 1529881367326206
+  URL-адрес сайта http://localhost:3000/
+
+  Секрет приложения c1da4dce4404d8bcc4334d420f6fbef4
+
+  AQBnKrGBEDPeTsGFdmsYo8_P563eLqxLX4eInzwMBOc2HmP2oVmxvwUX1GkOOaDwr5zq2SxJN2hNYZKMrzFEnsqJXpI28DhVmyOP3C4OosHy1i-E2guks7AvpuCWjNKad4wBU8IkXJbY0bHU8Oa2YvWz5_1SGRLA952T2wvc94x0NpkKNW8FbQiDbNykE3jR7G8uORYciLRpocJZ3i5ZtQoOTE8TaVatB_AIH9ZurrOM8n5GopHSYM24Oe6ScJhf0nvncmo2h28xKHS3UhlZjkW96PdXp5lau4ccLfpDoR0QMAjs3HX18XBDyDlNTmjIZDY#_=_
+
+  https://graph.facebook.com/v2.7/me/posts/?access_token=EAAVva0Nyrf4BAMNRyfXpNK2DdPTzLd6Izw7xvJx8mciOZA654nJ62WgeDTcjqfMLXz01OjSCdzzGM6FJZAeZChaCCXBBYKcwkgq7MySAPApYcJtURZCQA9rqr0hRKuBuZBSaZA4pKwGZBrFgMdyaIZAkNZAgybh863lQpGqOzUkn5aAZDZD

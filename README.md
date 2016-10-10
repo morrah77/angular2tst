@@ -1,3 +1,21 @@
+Описание задания
+Используя Public API любого знакомого вам сервиса (Facebook, Twitter или любого другого),
+реализуйте Angular 1.* приложение, состоящее из двух экранов-страниц:
+1. список элементов, получаемых из API из которого должен быть переход на
+2. детальный просмотра одного элемента. Сделайте возможность выполнять какое-либо простое
+действие с этим элементом - оставить комментарий, расшарить, редактировать и т.п.
+Должны быть использованы такие сервисы Angular, как $http/$resource, $route, promises,
+контроллеры, директивы. Прокомментируйте выбор того или иного способа реализации и
+использование дополнительных библиотек.
+Код должен быть покрыт тестами в степени, которая кажется вам разумной.
+Обратите внимание на внешний вид приложения и также прокомментируйте то, чем вы
+руководствовались при дизайне.
+Решение присылайте в виде ссылки на github репозиторий (в названии репозитория не пишите
+слово Ixtens, пожалуйста).
+
+# To save time for app making the common 'OuickStart' Angular 2 app was taken and modified minimally
+# these app description see below
+
 # Angular QuickStart Source
 [![Build Status][travis-badge]][travis-badge-url]
 
@@ -14,11 +32,11 @@ Please keep that in mind before posting issues and PRs.
 
 ## Prerequisites
 
-Node.js and npm are essential to Angular development. 
-    
+Node.js and npm are essential to Angular development.
+
 <a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank" title="Installing Node.js and updating npm">
 Get it now</a> if it's not already installed on your machine.
- 
+
 **Verify that you are running at least node `v4.x.x` and npm `3.x.x`**
 by running `node -v` and `npm -v` in a terminal/console window.
 Older versions produce errors.
@@ -75,7 +93,7 @@ npm start
 
 > `npm run typings -- install`
 
-The `npm start` command first compiles the application, 
+The `npm start` command first compiles the application,
 then simultaneously re-compiles and runs the `lite-server`.
 Both the compiler and the server watch for file changes.
 
