@@ -10,11 +10,15 @@
 Код должен быть покрыт тестами в степени, которая кажется вам разумной.
 Обратите внимание на внешний вид приложения и также прокомментируйте то, чем вы
 руководствовались при дизайне.
-Решение присылайте в виде ссылки на github репозиторий (в названии репозитория не пишите
-слово Ixtens, пожалуйста).
+Решение присылайте в виде ссылки на github репозиторий.
 
 # To save time for app making the common 'OuickStart' Angular 2 app was taken and modified minimally
-# these app description see below
+# that app description see below
+
+will run run at http://localhost:3000/
+This url is set up to test app on the Facebook
+
+
 
 # Angular QuickStart Source
 [![Build Status][travis-badge]][travis-badge-url]

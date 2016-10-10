@@ -1,8 +1,8 @@
-import {Component, Input, OnInit } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { ActivatedRoute, Params }   from '@angular/router';
-import { Location }                 from '@angular/common';
-import { FacebookService }  from './facebook/facebook.service';
+import {Component, Input, OnInit} from '@angular/core';
+import {Http, Response} from '@angular/http';
+import {ActivatedRoute, Params}   from '@angular/router';
+import {Location}                 from '@angular/common';
+import {FacebookService}  from './facebook/facebook.service';
 
 
 @Component({
@@ -30,17 +30,15 @@ export class DetailComponent implements OnInit {
   detailSaveUrl: string;
   omph: string = "Input your message";
 
-  constructor(private http: Http, private route: ActivatedRoute, private location: Location, private facebookService: FacebookService){
-    console.log('constructor:');
-
-console.dir(http);
+  constructor(private http: Http, private route: ActivatedRoute, private location: Location, private facebookService: FacebookService) {
+    //console.log('constructor:');
 
     //this.init();
   }
 
-  ngOnInit(){
-console.log('init:');
-    if(!(this.access_token)){
+  ngOnInit() {
+    //console.log('init:');
+    if (!(this.access_token)) {
 
       this.access_token = this.facebookService.get_token();
 
@@ -56,57 +54,63 @@ console.log('init:');
 
     // with Observable
     this.http.get(this.detail_url).subscribe(
-      (resp:Response) => this.setView(resp),
-      (ex:any) => this.handleOAuthError(ex)
+      (resp: Response) => this.setView(resp),
+      (ex: any) => this.handleOAuthError(ex)
     );
 
     //with Promice
     /*this.http.get(this.detail_url).toPromise()
-    .then(
-      (resp:Response) => this.setView(resp)
-    )
-    .catch(
-      (ex:any) => this.handleOAuthError(ex)
-    );*/
+     .then(
+     (resp:Response) => this.setView(resp)
+     )
+     .catch(
+     (ex:any) => this.handleOAuthError(ex)
+     );*/
 
   }
 
-  setView(resp: Response){
+  setView(resp: Response) {
     this.detail = resp.json();
   }
 
-  saveDetail(){
+  saveDetail() {
+
     this.formDetailSaveUrl();
     let savedetail = this.detail;
     savedetail.access_token = this.access_token;
+
     this.http.post(this.detailSaveUrl, savedetail).subscribe(
-      function(){ (resp: Response) => this.setView(resp) },
-      function(){ (ex:any) => this.handleOAuthError(ex) }
+      function () {
+        (resp: Response) => this.setView(resp)
+      },
+      function () {
+        (ex: any) => this.handleOAuthError(ex)
+      }
     );
 
     //with Promice
     /*this.http.get(this.detail_url).toPromise()
-    .then(
-      (resp:Response) => this.setView(resp)
-    )
-    .catch(
-      (ex:any) => this.handleOAuthError(ex)
-    );*/
+     .then(
+     (resp:Response) => this.setView(resp)
+     )
+     .catch(
+     (ex:any) => this.handleOAuthError(ex)
+     );*/
   }
 
-  refreshDetail(){
+  refreshDetail() {
     this.ngOnInit();
   }
 
-  formDetailUrl(){
+  formDetailUrl() {
     this.detail_url = this.facebookService.pref_detail_url + this.id + '/?access_token=' + this.access_token;
   }
 
-  formDetailSaveUrl(){
+  formDetailSaveUrl() {
     this.detailSaveUrl = this.pref_detail_url + this.id;
   }
 
-  handleOAuthError(ex: any){
+  handleOAuthError(ex: any) {
     console.log('handleOAuthError:');
     console.dir(ex);
   }
